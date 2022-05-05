@@ -3,15 +3,19 @@ import Header from '../partials/Header';
 import Card from '../partials/Card';
 
 export default function ExplorePage() {
-	return (
-		<div className='explore-container'>
-			<Header />
-			<div className='card-container'>
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-			</div>
-		</div>
-	);
+    return (
+        <div className='explore-page'>
+            <Header />
+
+            <div className='explore-container'>
+                <h2 className='explore-title'>Explore</h2>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </div>
+        </div>
+    );
 }

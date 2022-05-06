@@ -17,7 +17,6 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <div></div>
             <div className='border-bottom'></div>
         </>
     );

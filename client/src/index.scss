@@ -24,7 +24,8 @@ a {
     padding: 0 3rem;
     height: 4.5rem;
     align-items: center;
-    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.178);
 
     .logo {
         font-size: 1.3rem;
@@ -62,14 +63,15 @@ a {
 }
 
 .border-bottom {
+    z-index: 2;
     width: 100%;
     height: 0.6rem;
     background: rgb(49, 191, 205);
     background: linear-gradient(
         90deg,
-        rgba(49, 191, 205, 0.8435749299719888) 0%,
-        rgba(49, 205, 127, 0.8323704481792717) 65%,
-        rgba(49, 205, 75, 0.8911939775910365) 100%
+        rgb(49, 192, 205) 0%,
+        rgb(49, 205, 127) 65%,
+        rgb(49, 205, 75) 100%
     );
 }
 
@@ -142,7 +144,7 @@ a {
     .sign-up-button {
         letter-spacing: 1px;
         font-size: 1.2rem;
-        background-color: rgba(49, 205, 127, 0.671);
+        background-color: rgba(49, 205, 127, 0.753);
         color: white;
     }
 
@@ -167,16 +169,7 @@ a {
     text-align: left;
     background-color: rgba(128, 128, 128, 0.096);
 
-    Header {
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-    }
-
     .explore-container {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: auto;
         width: 70%;
         margin: 0 auto;
 
@@ -193,7 +186,7 @@ a {
             height: 100px;
             padding: 1.5rem 3rem;
             margin: 0 auto 1px;
-            box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.164);
 
             .title {
                 font-weight: 500;
@@ -217,5 +210,57 @@ a {
 /************************************************************************LOGIN PAGE************************************************************************/
 
 .login-page {
-    background-color: rgb(187, 0, 0);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.096);
+
+    .login-container {
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 70%;
+        margin: 0 auto;
+        box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.171);
+        background-color: white;
+
+        .title {
+            margin: 9rem auto 0;
+            font-weight: 900;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: rgb(39, 39, 39);
+        }
+
+        .login-forms {
+            display: flex;
+            border-bottom: 3px solid #1fab89;
+
+            .login-input {
+                display: block;
+                margin: 1rem auto;
+                border: none;
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        .sign-in-button {
+            border: 0;
+            border-radius: 2rem;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            background-color: #1fab89;
+            color: white;
+            text-decoration: none;
+
+            margin: 4.5rem auto 2rem;
+            width: auto;
+            display: block;
+            padding: 1rem 3rem;
+        }
+    }
 }

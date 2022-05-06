@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../partials/Header';
-import Card from '../partials/Card';
+import Card from '../partials/ExploreCard';
 
 export default function ExplorePage() {
     return (
@@ -9,10 +9,6 @@ export default function ExplorePage() {
 
             <div className='explore-container'>
                 <h2 className='explore-title'>Explore</h2>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
                 <Card />
                 <Card />
             </div>

@@ -10,7 +10,11 @@ export default function Card() {
                 <p className='author'>by:Urke</p>
             </div>
             <div>
-                <div className='comment'>💬Comments</div>
+                <div className='comment'>
+                    <i class='fa-solid fa-message'></i>
+                    <span> </span>
+                    Comments
+                </div>
             </div>
         </div>
     );

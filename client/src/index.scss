@@ -28,7 +28,7 @@ a {
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.178);
 
     .logo {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: 500;
         color: rgba(0, 0, 0, 0.774);
     }
@@ -44,7 +44,7 @@ a {
     }
 
     a {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 500;
         text-decoration: none;
         color: black;
@@ -56,6 +56,7 @@ a {
         width: 100%;
         height: 100%;
         align-items: center;
+        white-space: nowrap;
     }
     .explore:hover {
         background-color: #d4d4d470;
@@ -63,6 +64,68 @@ a {
 }
 
 .border-bottom {
+    z-index: 2;
+    width: 100%;
+    height: 0.6rem;
+    background: rgb(49, 191, 205);
+    background: linear-gradient(
+        90deg,
+        rgb(49, 192, 205) 0%,
+        rgb(49, 205, 127) 65%,
+        rgb(49, 205, 75) 100%
+    );
+}
+
+/************************************************************************LOGGED HEADER************************************************************************/
+
+.logged-header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3rem;
+    height: 4.5rem;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.178);
+
+    .logo {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.774);
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        cursor: pointer;
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+
+    a {
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: black;
+        width: 5rem;
+        margin: 0 1.5rem;
+    }
+    .explore {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .explore:hover {
+        background-color: #d4d4d470;
+    }
+}
+
+.border-bottom-logged-header {
     z-index: 2;
     width: 100%;
     height: 0.6rem;
@@ -130,11 +193,8 @@ a {
     }
 
     .explore-button {
-        letter-spacing: 1px;
-        font-size: 1.2rem;
         background-color: transparent;
         border: 2px solid;
-        color: white;
     }
 
     .explore-button:hover {
@@ -142,10 +202,7 @@ a {
     }
 
     .sign-up-button {
-        letter-spacing: 1px;
-        font-size: 1.2rem;
         background-color: rgba(49, 205, 127, 0.753);
-        color: white;
     }
 
     .sign-up-button:hover {
@@ -153,6 +210,9 @@ a {
     }
 
     button {
+        color: white;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
         margin: 0 1rem;
         border: 0;
         border-radius: 2rem;
@@ -235,32 +295,256 @@ a {
             color: rgb(39, 39, 39);
         }
 
-        .login-forms {
-            display: flex;
-            border-bottom: 3px solid #1fab89;
+        .login-form {
+            width: 30%;
+            margin: 3rem auto 1.3rem;
 
-            .login-input {
-                display: block;
+            .login-form-items {
                 margin: 1rem auto;
-                border: none;
-                padding: 1rem;
-                font-size: 1.1rem;
+                display: flex;
+                border-bottom: 3px solid #1fab89;
+                align-items: center;
+
+                .login-input {
+                    display: block;
+                    border: none;
+                    padding: 1rem;
+                    font-size: 1.1rem;
+                    outline: none;
+                    color: black;
+                }
+                ::placeholder {
+                    color: #1fab887c;
+                }
+
+                .icons {
+                    font-size: 1.5rem;
+                    color: rgb(39, 39, 39);
+                }
+            }
+
+            .sign-in-button {
+                border: 0;
+                border-radius: 2rem;
+                letter-spacing: 1px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                background-color: #1fab88;
+                color: white;
+                text-decoration: none;
+
+                margin: 4.5rem auto 2rem;
+                width: auto;
+                display: block;
+                padding: 0.9rem 3rem;
+            }
+            .sign-in-button:hover {
+                background-color: #1fab88e1;
+            }
+
+            p {
+                margin-bottom: 0.3rem;
+            }
+            a {
+                font-weight: 500;
+                text-decoration: underline;
+                color: rgb(0, 132, 255);
             }
         }
+    }
+}
 
-        .sign-in-button {
-            border: 0;
-            border-radius: 2rem;
+/************************************************************************REGISTER PAGE************************************************************************/
+
+.register-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.096);
+
+    .register-container {
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 70%;
+        margin: 0 auto;
+        box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.171);
+        background-color: white;
+
+        .title {
+            margin: 9rem auto 0;
+            font-weight: 900;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: rgb(39, 39, 39);
+        }
+
+        .register-form {
+            width: 30%;
+            margin: 3rem auto 1.3rem;
+
+            .register-form-items {
+                margin: 1rem auto;
+                display: flex;
+                border-bottom: 3px solid #1fab89;
+                align-items: center;
+
+                .register-input {
+                    display: block;
+                    border: none;
+                    padding: 1rem;
+                    font-size: 1.1rem;
+                    outline: none;
+                    color: black;
+                }
+                ::placeholder {
+                    color: #1fab887c;
+                }
+
+                .icons {
+                    font-size: 1.5rem;
+                    color: rgb(39, 39, 39);
+                }
+            }
+
+            .sign-up-button {
+                border: 0;
+                border-radius: 2rem;
+                letter-spacing: 1px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                background-color: #1fab88;
+                color: white;
+                text-decoration: none;
+
+                margin: 4.5rem auto 2rem;
+                width: auto;
+                display: block;
+                padding: 0.9rem 3rem;
+            }
+            .sign-up-button:hover {
+                background-color: #1fab88e1;
+            }
+
+            p {
+                margin-bottom: 0.3rem;
+            }
+            a {
+                font-weight: 500;
+                text-decoration: underline;
+                color: rgb(0, 132, 255);
+            }
+        }
+    }
+}
+
+/************************************************************************CREATE POST PAGE************************************************************************/
+
+.newpost-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.096);
+
+    .newpost-container {
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 70%;
+        margin: 0 auto;
+        box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.171);
+        background-color: white;
+        text-align: center;
+
+        .page-title {
+            margin: 9rem auto 2rem;
+            font-weight: 600;
+            font-size: 2rem;
+            color: rgb(39, 39, 39);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .post-title {
+            display: block;
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: rgba(0, 0, 0, 0.781);
+        }
+
+        .new-post-title,
+        .new-post-content {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 1rem auto 1.8rem;
+            resize: none;
+            width: 100%;
+            padding: 0.8rem 1.3rem;
+            border-radius: 0.4rem;
+            border: 1px solid #88888883;
+            color: rgb(0, 0, 0);
+        }
+
+        .new-post-content {
+            min-height: 7rem;
+        }
+        input:focus,
+        textarea:focus {
+            outline: none !important;
+            border: 1px solid #1fab88;
+        }
+
+        ::placeholder {
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.308);
+        }
+
+        .buttons {
+            margin: 1rem auto;
+            display: flex;
+            width: 28rem;
+            height: 3.4rem;
+        }
+
+        button {
             letter-spacing: 1px;
             font-size: 1.2rem;
-            background-color: #1fab89;
-            color: white;
-            text-decoration: none;
+            margin: 0 1rem;
+            border: 0;
+            border-radius: 2rem;
+            flex: 1;
+        }
 
-            margin: 4.5rem auto 2rem;
-            width: auto;
-            display: block;
-            padding: 1rem 3rem;
+        .post-button {
+            color: white;
+            background-color: #1fab88;
+        }
+
+        .post-button:hover {
+            background-color: #1fab88e1;
+        }
+
+        .discard-button {
+            color: #303030;
+            background-color: transparent;
+            border: 1px solid #303030;
+        }
+
+        .discard-button:hover {
+            background-color: #88888817;
         }
     }
 }

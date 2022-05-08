@@ -4,8 +4,9 @@ export default function LoginLayout() {
     return (
         <div>
             <h1 className='title'>SIGN IN TO BLOGME</h1>
-            <form>
-                <div className='login-forms'>
+            <form className='login-form'>
+                <div className='login-form-items'>
+                    <i class='fa-solid fa-user icons'></i>
                     <input
                         required
                         autoComplete='off'
@@ -15,7 +16,8 @@ export default function LoginLayout() {
                         placeholder='Username'
                     ></input>
                 </div>
-                <div className='login-forms'>
+                <div className='login-form-items'>
+                    <i class='fa-solid fa-key icons'></i>
                     <input
                         required
                         autoComplete='off'
@@ -26,6 +28,8 @@ export default function LoginLayout() {
                     ></input>
                 </div>
                 <button className='sign-in-button'>SIGN IN</button>
+                <p>Don't have an account?</p>
+                <a>Create one now!</a>
             </form>
         </div>
     );
